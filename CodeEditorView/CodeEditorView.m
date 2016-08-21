@@ -1,5 +1,5 @@
 //
-//  CodeEditor.m
+//  CodeEditorView.m
 //  CodeEditorView
 //
 //  Created by GuessEver on 16/8/16.
