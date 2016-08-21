@@ -1,5 +1,5 @@
 //
-//  CodeEditor.h
+//  CodeEditorView.h
 //  CodeEditorView
 //
 //  Created by GuessEver on 16/8/16.
