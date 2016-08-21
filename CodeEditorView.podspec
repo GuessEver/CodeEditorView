@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CodeEditorView"
-  s.version      = "0.3.3"
+  s.version      = "0.3.4"
   s.summary      = "A Code Editor TextView for iOS"
   s.description  = <<-DESC
 You can edit code with CodeEditorView with highlight and autoIndent
