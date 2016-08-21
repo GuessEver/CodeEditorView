@@ -9,10 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "CodeEditorColorAttribute.h"
 
-#define RGBA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
-#define RGB(r, g, b) RGBA(r, g, b, 1.0)
-#define RGB2(rgbValue) RGB((rgbValue & 0xFF0000) >> 16, (rgbValue & 0xFF00) >> 8, rgbValue & 0xFF)
-
 @interface CodeEditorColorScheme : NSObject
 
 typedef enum {

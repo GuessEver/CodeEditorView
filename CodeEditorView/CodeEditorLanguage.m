@@ -15,7 +15,7 @@
         case CodeEditorLanguageC:
             return @[@"c"];
         case CodeEditorLanguageCpp:
-            return @[@"cpp", @"cxx", @"cc"];
+            return @[@"cpp", @"cxx", @"cc", @"c++"];
         case CodeEditorLanguagePascal:
             return @[@"pas"];
         case CodeEditorLanguageJava:
