@@ -4,7 +4,7 @@ Code Editor UITextView
 ## Introduction
 You can use it to edit code with highlight and auto indent
 
-![ScreenShot.png](https://raw.githubusercontent.com/GuessEver/CodeEditorView/master/ScreenShot.png)
+![ScreenShot.png](https://raw.githubusercontent.com/GuessEver/CodeEditorView/master/screen.png)
 
 ## Useage
 1. import main header `#import "CodeEditorView.h"`
