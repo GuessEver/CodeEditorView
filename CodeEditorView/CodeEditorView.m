@@ -92,19 +92,20 @@
 - (void)textViewDidChange:(UITextView *)textView {
 //    NSLog(@"textChanged");
 //    NSLog(@"editedRange (%ld, %ld)", self.editedRange.location, self.editedRange.length);
-    NSRange paragaphRange = [self.textStorage.string paragraphRangeForRange:self.selectedRange];
+    NSRange paragaphRange = [self.textStorage.string paragraphRangeForRange:self.editedRange];
 //    NSLog(@"paragraph - (%ld, %ld) = %@", paragaphRange.location, paragaphRange.length, [self.textStorage.string substringWithRange:paragaphRange]);
+    
+    [self reloadDataInRange:paragaphRange];
+    
 #pragma mark auto indent
     if([self paragraphWithCodeBlockEndSymbol:paragaphRange] && self.languagePattern.language != CodeEditorLanguagePlain) {
-//        NSLog(@"ended symbol!");
+        //        NSLog(@"ended symbol!");
         if(self.lastTypedString.length == 1 && [self.lastTypedString characterAtIndex:0] == [self.languagePattern.codeBlockEndSymbol characterAtIndex:self.languagePattern.codeBlockEndSymbol.length-1]) {
             [self removeOneIndentFromParagraph:paragaphRange];
         }
     }
-    
-//    [self reloadDataInRange:paragaphRange];
     // cannot use reloadDataInRange, it may make comment block (/* ..(with '\n') */) error
-    [self reloadData];
+//    [self reloadData];
 }
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
     if(self.languagePattern.language == CodeEditorLanguagePlain) return YES; // just render normal text for normal

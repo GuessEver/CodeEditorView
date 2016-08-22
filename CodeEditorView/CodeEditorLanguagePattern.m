@@ -50,7 +50,7 @@
                              codeBlockBeginSymbol:codeBlockBeginSymbol
                                codeBlockEndSymbol:codeBlockEndSymbol
                                 withPatternNormal:@[
-                                                    [CodeEditorPattern initWithPattern:@"(.|\n)*" globalMatch:YES]
+                                                    [CodeEditorPattern initWithPattern:@".*" globalMatch:YES]
                                                     ]
                                           comment:comment
                                            number:number
@@ -78,7 +78,7 @@
                              codeBlockBeginSymbol:codeBlockBeginSymbol
                                codeBlockEndSymbol:codeBlockEndSymbol
                                 withPatternNormal:@[
-                                                    [CodeEditorPattern initWithPattern:@"(.|\n)*" globalMatch:YES]
+                                                    [CodeEditorPattern initWithPattern:@".*" globalMatch:YES]
                                                     ]
                                           comment:comment
                                            number:number
