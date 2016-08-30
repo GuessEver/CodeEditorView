@@ -1,7 +1,11 @@
 # CodeEditorView
+[![Build Status](https://travis-ci.org/GuessEver/CodeEditorView.svg?branch=master)](https://travis-ci.org/GuessEver/CodeEditorView)
+[![CocoaPods](https://img.shields.io/cocoapods/v/CodeEditorView.svg)]()
+[![CocoaPods](https://img.shields.io/cocoapods/p/CodeEditorView.svg)]()
+[![CocoaPods](https://img.shields.io/cocoapods/l/CodeEditorView.svg)]()
+
 Code Editor UITextView
 
-[![Build Status](https://travis-ci.org/GuessEver/CodeEditorView.svg?branch=master)](https://travis-ci.org/GuessEver/CodeEditorView)
 
 ## Introduction
 You can use it to edit code with highlight and auto indent
