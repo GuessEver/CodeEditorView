@@ -3,4 +3,4 @@ language: objective-c
 osx_image: xcode7.3
 
 script:
-	- xctool -project CodeEditorView.xcodeproj -scheme 'CodeEditorView' -sdk iphonesimulator build
+    - xctool -project CodeEditorView.xcodeproj -scheme 'CodeEditorView' -sdk iphonesimulator build
