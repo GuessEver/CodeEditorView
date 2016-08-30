@@ -1,4 +1,5 @@
 # CodeEditorView
+[![Build Status](https://travis-ci.org/GuessEver/CodeEditorView.svg?branch=master)](https://travis-ci.org/GuessEver/CodeEditorView)
 Code Editor UITextView
 
 ## Introduction
