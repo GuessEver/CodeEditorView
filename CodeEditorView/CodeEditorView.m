@@ -15,6 +15,7 @@
     self.languagePattern = [CodeEditorLanguagePattern initWithLanguage:languageType];
     self.colorScheme = [CodeEditorColorScheme colorSchemeWithColorSchemeType:colorScheme];
     
+    
     NSTextStorage* textStorage = [[NSTextStorage alloc] init];
     CodeEditorLayoutManager* layoutManager = [[CodeEditorLayoutManager alloc] initWithLineNumberColor:self.colorScheme.lineNumberColor];
     NSTextContainer* textContainer = [[NSTextContainer alloc] initWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX)];
@@ -30,6 +31,8 @@
         [self setAutocorrectionType:UITextAutocorrectionTypeNo];
         [self setAutocapitalizationType:UITextAutocapitalizationTypeNone];
         [self setDelegate:self];
+        
+        [self setKeyboardType:UIKeyboardTypeEmailAddress];
     }
     return self;
 }
