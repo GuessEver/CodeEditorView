@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F206860C9F03160472C5149 /* libPods-CodeEditorView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B10471F612C0CD82071989B4 /* libPods-CodeEditorView.a */; };
 		5FB075A61D694062002C4730 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB0759C1D694062002C4730 /* AppDelegate.m */; };
 		5FB075A71D694062002C4730 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0759D1D694062002C4730 /* Assets.xcassets */; };
 		5FB075A81D694062002C4730 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0759E1D694062002C4730 /* LaunchScreen.storyboard */; };
@@ -45,6 +46,9 @@
 		5FB075D21D694182002C4730 /* CodeEditorPattern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeEditorPattern.m; sourceTree = "<group>"; };
 		5FB075D31D694182002C4730 /* CodeEditorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeEditorView.h; sourceTree = "<group>"; };
 		5FB075D41D694182002C4730 /* CodeEditorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeEditorView.m; sourceTree = "<group>"; };
+		B10471F612C0CD82071989B4 /* libPods-CodeEditorView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CodeEditorView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B41C4C3E62DA6B2C56AA5198 /* Pods-CodeEditorView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeEditorView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodeEditorView/Pods-CodeEditorView.debug.xcconfig"; sourceTree = "<group>"; };
+		CEB5921B72AD7A45461C1B0B /* Pods-CodeEditorView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeEditorView.release.xcconfig"; path = "Pods/Target Support Files/Pods-CodeEditorView/Pods-CodeEditorView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,18 +56,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F206860C9F03160472C5149 /* libPods-CodeEditorView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AA5BCE5F2498B5A848C4427 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B41C4C3E62DA6B2C56AA5198 /* Pods-CodeEditorView.debug.xcconfig */,
+				CEB5921B72AD7A45461C1B0B /* Pods-CodeEditorView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5FB075771D694027002C4730 = {
 			isa = PBXGroup;
 			children = (
 				5FB075C61D694182002C4730 /* CodeEditorView */,
 				5FB0759A1D694062002C4730 /* CodeEditorViewDemo */,
 				5FB075811D694027002C4730 /* Products */,
+				1AA5BCE5F2498B5A848C4427 /* Pods */,
+				F8C3AEB13F1C8A7784E729D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +127,14 @@
 			path = CodeEditorView;
 			sourceTree = "<group>";
 		};
+		F8C3AEB13F1C8A7784E729D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B10471F612C0CD82071989B4 /* libPods-CodeEditorView.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +142,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5FB075971D694027002C4730 /* Build configuration list for PBXNativeTarget "CodeEditorView" */;
 			buildPhases = (
+				001320E3A2562B976477FF5D /* [CP] Check Pods Manifest.lock */,
 				5FB0757C1D694027002C4730 /* Sources */,
 				5FB0757D1D694027002C4730 /* Frameworks */,
 				5FB0757E1D694027002C4730 /* Resources */,
+				FFF91955E37E14C040E3C173 /* [CP] Embed Pods Frameworks */,
+				5EEF1ED1B25C2349F2F16B9A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -175,6 +202,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		001320E3A2562B976477FF5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5EEF1ED1B25C2349F2F16B9A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CodeEditorView/Pods-CodeEditorView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFF91955E37E14C040E3C173 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CodeEditorView/Pods-CodeEditorView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5FB0757C1D694027002C4730 /* Sources */ = {
@@ -294,6 +369,7 @@
 		};
 		5FB075981D694027002C4730 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B41C4C3E62DA6B2C56AA5198 /* Pods-CodeEditorView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -309,6 +385,7 @@
 		};
 		5FB075991D694027002C4730 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEB5921B72AD7A45461C1B0B /* Pods-CodeEditorView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

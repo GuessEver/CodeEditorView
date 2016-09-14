@@ -10,7 +10,7 @@ Code Editor UITextView
 ## Introduction
 You can use it to edit code with highlight and auto indent
 
-<img width="400px" src="https://raw.githubusercontent.com/GuessEver/CodeEditorView/master/screen.png">
+<img width="300px" src="https://raw.githubusercontent.com/GuessEver/CodeEditorView/master/screen.png">
 
 ## Useage
 1. import main header `#import "CodeEditorView.h"`
@@ -44,6 +44,12 @@ CodeEditorLanguagePlain
 
 ## Theme
 We just have one theme now just like `Xcode`. Hope for more in the future.
+
+## Thanks
+Module|Git|License
+---|---|---
+TextKit_LineNumbers|https://github.com/alldritt/TextKit_LineNumbers.git|MIT
+RFKeyboardToolbar|https://github.com/ruddfawcett/RFKeyboardToolbar.git|MIT
 
 ## License
 MIT

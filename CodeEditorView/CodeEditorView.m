@@ -32,7 +32,7 @@
         [self setAutocapitalizationType:UITextAutocapitalizationTypeNone];
         [self setDelegate:self];
         
-        [self setKeyboardType:UIKeyboardTypeEmailAddress];
+        [self loadKeyboardAndToolBar];
     }
     return self;
 }
@@ -47,6 +47,20 @@
     if(self = [self initWithLanguage:languageType andColorScheme:CodeEditorColorSchemeDefault]) {
     }
     return self;
+}
+
+# pragma mark keyboard & toolbar
+- (void)loadKeyboardAndToolBar {
+    [self setKeyboardType:UIKeyboardTypeEmailAddress];
+    self.quickInsertStrings = @[@"{", @"}", @"[", @"]", @"(", @")", @"&", @"%", @"+", @"-", @"*", @"/", @"!", @"~", @"^", @"?", @":", @","];
+    NSMutableArray<RFToolbarButton*>* quickInsertButtons = [[NSMutableArray alloc] init];
+    for (NSString* str in self.quickInsertStrings) {
+        RFToolbarButton* button = [RFToolbarButton buttonWithTitle:str andEventHandler:^{
+            [self insertText:str];
+        } forControlEvents:UIControlEventTouchUpInside];
+        [quickInsertButtons addObject:button];
+    }
+    [self setInputAccessoryView:[RFKeyboardToolbar toolbarWithButtons:quickInsertButtons]];
 }
 
 - (void)setLanguageType:(CodeEditorLanguageType)languageType {

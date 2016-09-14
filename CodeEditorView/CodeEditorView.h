@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "CodeEditorColorScheme.h"
 #import "CodeEditorLanguagePattern.h"
+#import "RFKeyboardToolbar.h"
 
 @interface CodeEditorView : UITextView <UITextViewDelegate>
+
+@property (nonatomic, strong) NSArray<NSString*>* quickInsertStrings;
 
 @property (nonatomic, strong) CodeEditorColorScheme* colorScheme;
 @property (nonatomic, strong) CodeEditorLanguagePattern* languagePattern;
