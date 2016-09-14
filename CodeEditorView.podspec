@@ -12,6 +12,6 @@ You can edit code with CodeEditorView with highlight and autoIndent
   s.source       = { :git => "https://github.com/GuessEver/CodeEditorView.git", :tag => "#{s.version}" }
   s.source_files  = "CodeEditorView/*"
   s.frameworks = "Foundation", "UIKit"
-  s.dependency = "RFKeyboardToolbar", "~> 1.3"
   s.requires_arc = true
+  s.dependency "RFKeyboardToolbar", "~> 1.3"
 end
