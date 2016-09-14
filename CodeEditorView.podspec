@@ -13,5 +13,5 @@ You can edit code with CodeEditorView with highlight and autoIndent
   s.source_files  = "CodeEditorView/*"
   s.frameworks = "Foundation", "UIKit"
   s.requires_arc = true
-  s.dependency "RFKeyboardToolbar", "~> 1.3"
+  s.dependency 'RFKeyboardToolbar', '~> 1.3'
 end
